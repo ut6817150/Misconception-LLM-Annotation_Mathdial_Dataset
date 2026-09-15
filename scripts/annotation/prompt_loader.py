@@ -1,9 +1,9 @@
 """Prompt discovery and assembly.
 
-Prompt templates are markdown files in ``extension/artifacts/annotation_prompts``;
+Prompt templates are markdown files in ``artifacts/annotation_prompts``;
 the filename stem is the prompt's name. Templates contain a
 ``{CODEBOOK_FULL_Vn}`` placeholder, filled from the matching
-``codebook_full_vn.md`` file in ``extension/artifacts/codebooks``. Keeping
+``codebook_full_vn.md`` file in ``artifacts/codebooks``. Keeping
 prompts as files means new variants are added by dropping a file in the folder,
 and the extraction cache keys results by prompt name so variants never collide.
 
@@ -22,8 +22,8 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Dict, List, Tuple
 
-PROMPTS_DIR = Path("extension/artifacts/annotation_prompts")
-CODEBOOK_DIR = Path("extension/artifacts/codebooks")
+PROMPTS_DIR = Path("artifacts/annotation_prompts")
+CODEBOOK_DIR = Path("artifacts/codebooks")
 
 PLACEHOLDER_RE = re.compile(r"\{CODEBOOK_FULL_V(\d+)\}")
 

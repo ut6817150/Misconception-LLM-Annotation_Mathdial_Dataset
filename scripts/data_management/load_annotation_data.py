@@ -6,9 +6,9 @@ loader therefore disables pandas' default conversion of blanks to ``NaN``.
 
 Examples
 --------
->>> from extension.scripts.data_management.load_annotation_data import load_dataset
+>>> from scripts.data_management.load_annotation_data import load_dataset
 >>> validation = load_dataset(
-...     "extension/artifacts/annotation_Dev_val_and_eval_sets/validation_set.csv"
+...     "artifacts/annotation_dev_val_and_eval_sets/validation_set.csv"
 ... )
 >>> train = load_dataset("data/misconception/mathdial_train.csv")
 >>> test = load_dataset("data/misconception/mathdial_test.csv")

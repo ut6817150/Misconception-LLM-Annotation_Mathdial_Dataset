@@ -6,7 +6,7 @@ dialogue)``: it takes a self-contained dialogue record produced by
 through ``prompt_loader.prompt_constructor``, sends them with ``llm_call``,
 validates the returned JSON, and saves the full record (raw output, reasoning
 trace, errors, usage, cost) to
-``extension/artifacts/extraction_cache/{split}/{model}/{prompt}/{id}.json``.
+``artifacts/extraction_cache/{split}/{model}/{prompt}/{id}.json``.
 Re-runs skip cells already cached as valid. Scoring reads only the cache.
 
 Prompts listed in SCAN_PROMPTS additionally emit a per-unit line
@@ -38,7 +38,7 @@ from . import prompt_loader
 from .schema import FAMILIES
 
 BASE_URL = "https://openrouter.ai/api/v1"
-CACHE_DIR = Path("extension/artifacts/extraction_cache")
+CACHE_DIR = Path("artifacts/extraction_cache")
 
 # Prompts whose output schema carries the mandatory scan and departures
 # sections. Membership switches the scan invariants in ``validate`` from
